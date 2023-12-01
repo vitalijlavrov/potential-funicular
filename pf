@@ -1,0 +1,14 @@
+            .minimumScaleFactor(0.1)
+            .lineLimit(1)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                UserDefaults.testValue = "two"
+            }
+        }
+    }
+}
+
+struct UsingCustomWrapperView_Previews: PreviewProvider {
+    static var previews: some View {
+        UsingCustomWrapperView()
